@@ -1,0 +1,19 @@
+.Logo {
+  margin-left: 10px;
+}
+nav {
+  align-items: center;
+}
+.navbar {
+  position: sticky;
+  z-index: 999999;
+  top: 0;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.Shop {
+  background-color: #ffa31a;
+  color: black;
+  background: #ff9900;
+  border-radius: 6px;
+  padding: 2px 4px;
+}

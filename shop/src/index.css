@@ -1,0 +1,148 @@
+body {
+  align-items: center;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.content {
+  min-height: calc(100vh - 70px - 64px);
+  padding: 1.5rem 0;
+}
+
+.goods {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.card__action {
+  align-items: center;
+}
+.card {
+  transition: all 0.5s ease;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  margin: 5px 5px 12px 5px;
+}
+.card-image :hover {
+  opacity: 0.6;
+  transform: scale(1.2);
+  cursor: pointer;
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
+.card-content {
+  flex-grow: 1;
+}
+.card-content p {
+  margin-left: 5px;
+}
+.card-image {
+  transition: all 0.5s ease;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    center/cover no-repeat fixed;
+  position: relative;
+  overflow: hidden;
+}
+.card img {
+  transition: all 0.5s ease;
+}
+.card:hover img {
+  transform: scale(1.2);
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+.cart {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  z-index: 99999;
+  color: black;
+  padding: 1rem;
+  border-radius: 7px;
+  background-color: #ff9900;
+  transition: all 0.5s ease;
+}
+.cart :hover,
+:focus {
+  transform: scale(1.1);
+}
+@media (min-width: 767px) {
+  .cart {
+    top: 6rem;
+    bottom: unset;
+    transition: all 0.5s ease;
+  }
+
+  .cart:hover,
+  :focus {
+    transform: scale(1.1);
+  }
+}
+.basket {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.basket-list {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50rem;
+  transform: translate(-50%, -50%);
+  max-width: 95%;
+  box-shadow: 0px 6px 15px 0 rgba(0, 0, 0, 15);
+  background-color: #ffff;
+  animation: show 0.5s ease;
+}
+.basket-close {
+  cursor: pointer;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.8rem;
+  color: #ffff;
+}
+.basket__delete {
+  background-color: #ff9900;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket__delete:hover {
+  background-color: wheat;
+}
+.incdicicons,
+.delete {
+  cursor: pointer;
+}
+
+@keyframes show {
+  from {
+    top: 70%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
